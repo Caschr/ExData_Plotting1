@@ -43,7 +43,7 @@ getData <- function(dataURL){
 
 makeplot <- function(input) {
         png(filename="plot4.png")
-        par(mfrow=c(2,2))
+        par(mfrow=c(2,2), bg=NA)
 
         ## Plot 1 (top left)
         with(plotdata, plot(Global_active_power ~ datetime, type="l", ylab="Global Active Power", xlab=""))

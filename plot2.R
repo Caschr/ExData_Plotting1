@@ -43,7 +43,7 @@ getData <- function(dataURL){
 
 makeplot <- function() {
   png(filename="plot2.png")
-
+        par(bg=NA)
   plot(plotdata$Global_active_power ~ plotdata$datetime, type="l", ylab="Global Active Power (kilowatts)", xlab="")
 
   dev.off()

@@ -41,8 +41,8 @@ getData <- function(dataURL){
 
 }
 makeplot <- function() {
-
   png(filename="plot1.png")
+  par(bg=NA)
   hist(plotdata$Global_active_power, col = "#FF2424", xlab = "Global Active Power (kilowatts)", main="Global Active Power")
   dev.off()
 
