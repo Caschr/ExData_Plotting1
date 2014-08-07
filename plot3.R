@@ -1,8 +1,8 @@
-## Plot 1
+## Plot 3
 
 createPlot <- function(dataURL = "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"){
-  df <- getData(dataURL)
-  makeplot()
+        getData(dataURL)
+        makeplot()
 
 }
 
@@ -39,11 +39,20 @@ getData <- function(dataURL){
                 plotdata <<- df[df$Date >= startdate & df$Date <= finishdate,]
         }
 
+        else {
+                plotdata
+        }
 }
+
 makeplot <- function() {
+        png(filename="plot3.png")
 
-  png(filename="plot1.png")
-  hist(plotdata$Global_active_power, col = "#FF2424", xlab = "Global Active Power (kilowatts)", main="Global Active Power")
-  dev.off()
+        with(plotdata, {
+                plot(Sub_metering_1 ~ datetime, type="l", ylab="Energy sub metering", col = "black", xlab="");
+                lines(Sub_metering_2 ~ datetime, col = "red");
+                lines(Sub_metering_3 ~ datetime, col = "blue")
+        })
+        legend(x="topright", lty=1, legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col=c("black", "red", "blue"))
 
+        dev.off()
 }
