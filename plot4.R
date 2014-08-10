@@ -1,8 +1,8 @@
 ## Plot 4
 
-createPlot <- function(dataURL = "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"){
-        df <- getData(dataURL)
-        makeplot()
+createplot4 <- function(dataURL = "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"){
+        getdata(dataURL)
+        makeplot4()
 
 }
 
@@ -41,7 +41,7 @@ getData <- function(dataURL){
 
 }
 
-makeplot <- function(input) {
+makeplot4 <- function(input) {
         png(filename="plot4.png")
         par(mfrow=c(2,2), bg=NA)
 

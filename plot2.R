@@ -1,12 +1,12 @@
 ## Plot 2
 
-createPlot <- function(dataURL = "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"){
-  getData(dataURL)
-  makeplot()
+createplot2 <- function(dataURL = "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"){
+        getdata(dataURL)
+        makeplot2()
 
 }
 
-getData <- function(dataURL){
+getdata <- function(dataURL){
         permwd <- getwd()
 
         if(!exists("plotdata")) {
@@ -41,10 +41,10 @@ getData <- function(dataURL){
 
 }
 
-makeplot <- function() {
+makeplot2 <- function() {
   png(filename="plot2.png")
         par(bg=NA)
-  plot(plotdata$Global_active_power ~ plotdata$datetime, type="l", ylab="Global Active Power (kilowatts)", xlab="")
+        plot(plotdata$Global_active_power ~ plotdata$datetime, type="l", ylab="Global Active Power (kilowatts)", xlab="")
 
   dev.off()
 }

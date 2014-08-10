@@ -1,12 +1,12 @@
 ## Plot 3
 
-createPlot <- function(dataURL = "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"){
-        getData(dataURL)
-        makeplot()
+createplot3 <- function(dataURL = "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"){
+        getdata(dataURL)
+        makeplot3()
 
 }
 
-getData <- function(dataURL){
+getdata <- function(dataURL){
         permwd <- getwd()
 
         if(!exists("plotdata")) {
@@ -44,7 +44,7 @@ getData <- function(dataURL){
         }
 }
 
-makeplot <- function() {
+makeplot3 <- function() {
         png(filename="plot3.png")
 
         par(bg=NA)
