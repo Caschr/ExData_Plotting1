@@ -45,7 +45,7 @@ getdata <- function(dataURL){
 }
 
 makeplot3 <- function() {
-        png(filename="plot3.png")
+        png(filename="plot3.png", width=508, height=508)
 
         par(bg=NA)
         with(plotdata, {

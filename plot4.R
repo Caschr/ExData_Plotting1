@@ -42,7 +42,7 @@ getData <- function(dataURL){
 }
 
 makeplot4 <- function(input) {
-        png(filename="plot4.png")
+        png(filename="plot4.png", width=508, height=508)
         par(mfrow=c(2,2), bg=NA)
 
         ## Plot 1 (top left)
