@@ -45,9 +45,9 @@ getdata <- function(dataURL){
 }
 
 makeplot3 <- function() {
-        png(filename="plot3.png", width=508, height=508)
+        png(filename="plot3.png", width=480, height=480)
 
-        par(bg=NA)
+        par(bg=NA, font.lab=1, ps = 12)
         with(plotdata, {
                 plot(Sub_metering_1 ~ datetime, type="l", ylab="Energy sub metering", col = "black", xlab="");
                 lines(Sub_metering_2 ~ datetime, col = "red");
